@@ -22,7 +22,7 @@ public class Fmi2FFI {
             MethodHandle methodHandle = CLinker.getInstance().downcallHandle(getVersion1.get(), mt, fd);
             Object invoke = methodHandle.invoke();
             String c = CLinker.toJavaString(((MemoryAddress) invoke));
-            System.out.println("test");
+            return c;
         }
         return null;
     }
